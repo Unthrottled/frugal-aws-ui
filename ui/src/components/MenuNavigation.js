@@ -60,7 +60,7 @@ class MenuNavigation extends React.Component {
       <div className={classes.fullList}>
         <List>
           {menuTopics.map((topic, index) => (
-            topic.path ?
+            (topic.path && !topic.href) ?
               (<Link key={topic.title} to={topic.path} style={{textDecoration: 'none'}}>
                 {this.getListItem(index, topic)}
               </Link>) :

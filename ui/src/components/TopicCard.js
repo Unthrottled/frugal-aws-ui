@@ -76,7 +76,7 @@ class TopicCard extends React.Component {
           </div>
           <div>
             {
-              topic.path ? (<Link to={topic.path} style={{textDecoration: 'none'}}>
+              (topic.path && !topic.href) ? (<Link to={topic.path} style={{textDecoration: 'none'}}>
                 <Typography className={classes.title} gutterBottom variant='h4' color='inherit' component='h2'>
                   {topic.title}
                 </Typography>
